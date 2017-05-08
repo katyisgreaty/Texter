@@ -35,5 +35,14 @@ namespace Texter.Controllers
             newMessage.Send();
             return RedirectToAction("Index");
         }
+
+
+        //ajax method to display contact
+
+        public IActionResult DisplayContact()
+        {
+            Contact contact = new Contact("Bill", "+12065546435", 1);
+            return Json(contact);
+        } 
     }
 }
